@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astronauts on International Space Station</title>
+</head>
+<body>
+<h3 th:text="'There are ' + ${count} + ' people in space.'"></h3>
+<ul th:each="item : ${list}">
+    <li>
+        <span th:text="${item.name}"></span>&nbsp;-&nbsp;
+        <span th:text="${item.craft}"></span>
+    </li>
+</ul>
+</body>
+</html>
